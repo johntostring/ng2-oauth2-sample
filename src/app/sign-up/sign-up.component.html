@@ -1,0 +1,20 @@
+<p>
+  <a href="javascript:void(0)" routerLink="/login">已有账号，去登录</a>
+</p>
+<h2 class="text-center">注册</h2>
+<form class="regForm" (ngSubmit)="register()" onsubmit="return false;">
+  <label for="inputUsername">用户名：</label>
+  <input id="inputUsername" type="text" name="username" [(ngModel)]="userForm.username" autofocus/>
+  <br/>
+  <label for="inputPassword">密码：</label>
+  <input id="inputPassword" type="password" name="password" [(ngModel)]="userForm.password"/>
+  <br/>
+  <label for="inputPasswordConfirm">确认密码：</label>
+  <input id="inputPasswordConfirm" type="password" name="password" [(ngModel)]="userForm.passwordConfirm"/>
+  <p *ngIf="validMessage" style="color: #FF0000;">
+    {{validMessage}}
+  </p>
+  <p class="text-right">
+    <button type="submit" [disabled]="(userForm.username.length < 3) || userForm.password.length < 3">提交注册</button>
+  </p>
+</form>

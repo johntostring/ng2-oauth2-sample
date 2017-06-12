@@ -1,0 +1,30 @@
+<div>
+  <h2>登录成功</h2>
+  <p class="logout">
+    <button type="button" (click)="logout()">注销</button>
+  </p>
+
+  <table class="tttable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>名称</th>
+        <th>作者</th>
+        <th>出版日期</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="!books">
+      <tr>
+        <td colspan="4">暂无数据</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="books">
+      <tr *ngFor="let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.publishDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

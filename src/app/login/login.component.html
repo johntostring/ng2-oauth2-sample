@@ -1,0 +1,11 @@
+<form class="loginForm" (ngSubmit)="loginUser()" onsubmit="return false;">
+  <label for="inputUsername">用户名：</label>
+  <input id="inputUsername" type="text" name="username" [(ngModel)]="user.username" autofocus/>
+  <br/>
+  <label for="inputPassword">密码：</label>
+  <input id="inputPassword" type="password" name="password" [(ngModel)]="user.password"/>
+  <p class="text-right">
+    <a href="javascript:void(0)" routerLink="/sign-up">没有账号，立即注册</a><br>
+    <button type="submit" [disabled]="(user.username.length < 3) || user.password.length < 3">登录</button>
+  </p>
+</form>

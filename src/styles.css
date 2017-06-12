@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-size: 13px;
+}
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+input[type="text"],
+input[type="password"] {
+  padding: 5px 10px;
+  margin: 5px 0;
+  font-size: 15px;
+}
+label{
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+table {
+  width: 99%;
+  font-size:13px;
+  color:#333333;
+  border-width: 1px;
+  border-color: #666666;
+  border-collapse: collapse;
+}
+table.tttable th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #dedede;
+}
+table.tttable td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #ffffff;
+}
+table.tttable tbody tr:hover td {
+  background-color: #eeeeee;
+}
+
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right
+}
